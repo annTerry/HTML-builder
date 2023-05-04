@@ -24,7 +24,7 @@ rl.on('line', (input) => {
   if (input === 'exit') {
     rl.close();     
   } else {    
-    fs.appendFile(filePath, `${input}'\n'`, simpleError);  
+    fs.appendFile(filePath, input +'\n', simpleError);  
   }
 });
 
