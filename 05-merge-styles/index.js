@@ -7,7 +7,7 @@ const targetFile = path.join(targetFolder, 'bundle.css');
 
 const createBundle = async (source) => {
     const files = await fs.readdir(source, { withFileTypes: true });
-    fs.writeFile(targetFile, '');
+    await fs.writeFile(targetFile, '');
     for (const file of files) {
         if (file.isFile()) {
             const ext = path.extname(file.name);
